@@ -4,15 +4,15 @@
 
         # # # # # # # # # # # # # # # # # # # # # # # # #
         # 
-        # This Python program prompts the user to enter 
-        # series of string on a newly created .txt file.
-        # It provides a sentinel value to control the   
-        # number of entered data, validates the input   
-        # and print the output on the screen.           
+        #  This Python program prompts the user to enter 
+        #  series of string on a newly created .txt file.
+        #  It provides a sentinel value to control the   
+        #  number of entered data, validates the input   
+        #  and prints the output on the screen.           
         #                                               
-        # The program also asks the user to choose      
-        # whether another string will be added to the   
-        # existing file.                                
+        #  The program also asks the user to choose      
+        #  whether another string will be added to the   
+        #  existing file.                                
         #                                               
         # # # # # # # # # # # # # # # # # # # # # # # # #
 
