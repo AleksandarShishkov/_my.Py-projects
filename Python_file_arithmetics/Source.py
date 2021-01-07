@@ -7,8 +7,9 @@
         #  file and to write series of integers to it. A menu
         #  of options is then shown and asks the user to
         #  select one of them. A result is calculated and shown.
+        #
         #  The user exits the program once option '0' is 
-        #  selected.
+        #  selected from the menu.
         #
         # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
