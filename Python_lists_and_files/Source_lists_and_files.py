@@ -10,8 +10,8 @@
         # It then opens the file and reads the
         # data into a list.
         #
-        # The user can search for a integer 
-        # on the liset or to quit by pressin '-1'.
+        # The user can search for an integer 
+        # on the list or to quit by pressing '-1'.
 
 
 
