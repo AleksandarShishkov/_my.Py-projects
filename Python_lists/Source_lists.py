@@ -28,7 +28,7 @@ def main():
     
     select = 1                                                                  # an integer to hold the selected option
 
-    while (select != 0):                                                        # validating the option serlected in outer loop
+    while (select != 0):                                                        # validating the option selected in outer loop
     
         size = int(input(                                                       # prompting the user to select the size of the list
             "\nEnter the size of the list> "))
