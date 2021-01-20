@@ -3,13 +3,13 @@
 
 
         # A Python program that prompts
-        # the user to enter a string and to
+        # the user to enter a string and then
         # select an action from a menu.
         #
-        # It then dispalys a formatted output.
-        # The user can input new string or also
-        # to quit the program by selecting '0'.
-
+        # The program deisplayes the ouptu on the screen
+        # after executing the selected operation.
+        
+        
 
 
 
