@@ -2,11 +2,11 @@
 
 
 
-def convert_integer(user_num):                          # definition of convert_integer method 
-                                                        # with parameter for the user`s num
+def convert_integer(user_num):                                      # definition of convert_integer method 
+                                                                    # with parameter for the user`s num
 
-    for i in range(len(user_num)):                      # validating each number and printing
-                                                        # a letter on the screen
+    for i in range(len(user_num)):                                  # validating each number and printing
+                                                                    # a letter on the screen
 
         if(user_num[i] == '1'):
 
