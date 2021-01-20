@@ -2,13 +2,13 @@
 
 
 
-def convert_string(user):                               # definition of convert_string method
-                                                        # with a parameter for the user`s string
+def convert_string(user):                                           # definition of convert_string method
+                                                                    # with a parameter for the user`s string
 
 
     
-   for i in range(len(user)):                           # validating each letter and printing a
-                                                        # number on the screen
+   for i in range(len(user)):                                       # validating each letter and printing a
+                                                                    # number on the screen
 
 
         if(user[i].upper() == 'A' or user[i].upper() == 'B' or
