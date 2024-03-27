@@ -1,21 +1,6 @@
 
 
-
-
-        # A Python program that prompts
-        # the user to initialize a list of
-        # integers with user-defined size.
-        #
-        # It then shows a menu with different
-        # arithmetic operations as options.
-        #
-        # The program outputs the calculations
-        # in dependance of the oprion selected.
-
-
-
-
-import menu                                                                     # importing the menu module
+import menu                                                                     
 
 
 
@@ -24,16 +9,15 @@ def main():
 
 
 
-    aList = []                                                                  # an empty list
+    aList = []                                                                  
     
-    select = 1                                                                  # an integer to hold the selected option
-
-    while (select != 0):                                                        # validating the option selected in outer loop
+    select = 1                                                                  
+    while (select != 0):                                                        
     
-        size = int(input(                                                       # prompting the user to select the size of the list
+        size = int(input(                                                       
             "\nEnter the size of the list> "))
 
-        print('\nEnter the elements:')                                          # prompting the user to enter integers on the list
+        print('\nEnter the elements:')                                          
 
         for i in range(0, size):
 
@@ -42,19 +26,18 @@ def main():
             aList += [num]
 
 
-        select = menu.menu_option()                                             # calling the menu_option() function
+        select = menu.menu_option()                                             
 
 
-        while(select != 5 and select != 0):                                     # validating the option selected in inner loop
+        while(select != 5 and select != 0):                                     
 
             
 
             if(select == 1):
 
                 find_num = int(input("\nWhich number you are " \
-                "searching for?> "))                                            # prompting the user to select the searched integer
-
-                if(find_num in aList):                                          # validating the input
+                "searching for?> "))                                            
+                if(find_num in aList):                                          
                     print("\nThe number`s on the list!\n")
                 else:
                     print("\nThe number`s not on the list!\n")
@@ -62,27 +45,27 @@ def main():
 
             elif(select == 2):
 
-                sum_list = sum(aList)                                           # summing the list`s elements
+                sum_list = sum(aList)                                           
 
-                print("\nThe sum of the elements is: ", sum_list)               # printing the result
+                print("\nThe sum of the elements is: ", sum_list)               
 
 
             elif(select == 3):
             
-                product = 1                                                     # aninteger with default value assigned 
+                product = 1                                                      
 
                 for element in aList:
 
-                    product *= element                                          # calculating the product
+                    product *= element                                          
 
-                print("\nThe product is: ", product)                            # printing the result
+                print("\nThe product is: ", product)                            
 
 
             elif(select == 4):
 
-                avrg = sum(aList) / size                                        # calculating the average
+                avrg = sum(aList) / size                                        
                 
-                print("\nThe average is: ", format(avrg, '.2f'))                # printing the result
+                print("\nThe average is: ", format(avrg, '.2f'))                
 
 
             elif(select == 5):
@@ -94,7 +77,7 @@ def main():
             elif(select == 6):
                 print("\nThe list is: ")
 
-                for element in aList:                                             # printing the elements on the list
+                for element in aList:                                           
 
                     print(element, end = ' ')
 
@@ -102,14 +85,13 @@ def main():
 
             elif(select == 0):
 
-                print("\nYou have exited the menu!\n")                             # printing message indicating that the menu`s been
-                                                                                   # exited
-           
+                print("\nYou have exited the menu!\n")                             
+                                                                                              
             else:
 
                 print("\nInvalid input!\n")
 
-            select = menu.menu_option()                                             # printing the menu
+            select = menu.menu_option()                                             
 
 
     print("\nThe program has ended!\n")
@@ -117,6 +99,6 @@ def main():
 
 
 
-main()                                                                              # calling the main() function
+main()                                                                              
 
 
