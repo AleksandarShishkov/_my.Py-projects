@@ -5,37 +5,37 @@
 def read_file(file_name):
 
     
-    list_numbers = []                                                               # an empty list of integers
+    list_numbers = []                                                               
     
     
-    print("\nEnter the name of the file> ", end = ' ')                              # prompting the user to enter the file name
+    print("\nEnter the name of the file> ", end = ' ')                             
     name_file = input()
 
-    while(name_file != file_name):                                                  # validating the input
+    while(name_file != file_name):                                                 
 
         print("\nInvalid file name. Try again> ", end = ' ')
         name_file = input()
 
-    input_file = open(name_file, 'r')                                               # opening the file
+    input_file = open(name_file, 'r')                                              
 
-    list_numbers = input_file.readlines()                                           # reading the data into the list
+    list_numbers = input_file.readlines()                                          
 
     
-    print("\nThe items are on the list!\n")                                         # printing a message indicating that the
-                                                                                    # data`s been read successfully
+    print("\nThe items are on the list!\n")                                        
+                                                                                   
 
-    input_file.close()                                                              # closing the file
+    input_file.close()                                                             
 
     for index in range(len(list_numbers)):                                          
 
-        list_numbers[index] = int(list_numbers[index])                              # converting the list`s data into integers
+        list_numbers[index] = int(list_numbers[index])                             
 
 
     i = 1
 
     print("\nThe list is: \n")
 
-    for index in list_numbers:                                                      # printing the list on the screen
+    for index in list_numbers:                                                     
 
         print([index], end = ' ')
 
@@ -47,7 +47,7 @@ def read_file(file_name):
 
     print('\n')
 
-    return list_numbers                                                             # returning the list
+    return list_numbers                                                            
 
 
 
