@@ -1,25 +1,6 @@
 
 
-
-
-                        # A Python program that promts the user
-                        # to enter the details for user defined number
-                        # of contacts. The program stores the
-                        # data in three dictionaries.
-                        #
-                        # Trough a menu the user can
-                        # add new contacts or to modify the
-                        # current records. The user can also
-                        # delete some of the contacts or all of them.
-                        #
-                        # The program terminates once the user
-                        # selects option '0'
-
-
-
-
-
-import Options                                                                                                          # importing Options module
+import Options                                                                                                          
 
 
 
@@ -29,100 +10,97 @@ def main():
 
 
 
-    choice = 1                                                                                                          # an integer to hold the choice
-    name_email = {}                                                                                                     # an empty dictionary to hold the names as keys and
-                                                                                                                        # the emails as values
+    choice = 1                                                                                                          
+    name_email = {}                                                                                                     
+                                                                                                                        
 
-    telephone = {}                                                                                                      # an empty dictionary to hold the phone numbers as values
+    telephone = {}                                                                                                      
 
-    address = {}                                                                                                        # an empty dictionary to hold the addresses as values
+    address = {}                                                                                                        
 
 
 
-    while(choice != 0):                                                                                                 # user controlled loop
+    while(choice != 0):                                                                                                 
 
-        choice = Options.menu(choice)                                                                                   # calling the menu() method
+        choice = Options.menu(choice)                                                                                   
         
         
-        if(choice == 1):                                                                                                # validating the choice
+        if(choice == 1):                                                                                                
+            name = input("\nEnter a name to create a new contact> ")                                                    
 
-            name = input("\nEnter a name to create a new contact> ")                                                    # promting the user to enter a name for the new contact
-
-            if(name in name_email):                                                                                     # validating the name
+            if(name in name_email):                                                                                     
 
                 print("\n\tThis contact is already on the list!\n")
 
             else:
 
-                email = input("Enter the e-mail address> ")                                                             # promting the user to enter the email address
-                name_email[name] = email                                                                                # stroting the email address in name_email dict
-                telephone[name] = ''                                                                                    # stroing default value in telephone dict
-                address[name] = ''                                                                                      # string default value in address dict
+                email = input("Enter the e-mail address> ")                                                             
+                name_email[name] = email                                                                                
+                telephone[name] = ''                                                                                    
+                address[name] = ''                                                                                      
 
                 print("\n\tThe contact`s been saved successfully!\n")
 
 
         elif(choice == 2):
 
-            name = input("\nEnter the contact`s name> ")                                                                # promting the user to enter the contact`s name
+            name = input("\nEnter the contact`s name> ")                                                                
 
-            if(name in name_email):                                                                                     # validating the name
+            if(name in name_email):                                                                                     
 
-                try:                                                                                                    # validating the input with try-except blocks
+                try:                                                                                                    
 
-                    telephone_num = input("\nEnter the contact`s phone number> ")                                       # promting the user to enter the phone number
-                    telephone[name] = telephone_num                                                                     # storing it in telephone dict
-
+                    telephone_num = input("\nEnter the contact`s phone number> ")                                       
+                    telephone[name] = telephone_num                                                                     
                     print("\n\tThe phone number`s been saved successfully!\n")
 
                 except ValueError:
 
-                    print("'", telephone_num, "' cannot be a valid telephone.")                                         # printing error message if an exception is caught
+                    print("'", telephone_num, "' cannot be a valid telephone.")                                         
                     telephone_num = input("Try again> ")
 
 
             else:
 
-                print("\n\tNo such name. You should create the contact first!\n")                                       # printing a message if no such name excists
+                print("\n\tNo such name. You should create the contact first!\n")                                       
 
 
 
         elif(choice == 3):
 
-            name = input("\nEnter the contact`s name> ")                                                                # promting the user to enter the contact`s name
+            name = input("\nEnter the contact`s name> ")                                                                
 
-            if(name in name_email):                                                                                     # validating the input
+            if(name in name_email):                                                                                     
 
-                contact_address = input("\nEnter the contact`s address> ")                                              # promting the user to enter the address
-                address[name]= contact_address                                                                          # storing the input in address dict
+                contact_address = input("\nEnter the contact`s address> ")                                              
+                address[name]= contact_address                                                                          
 
                 print("\n\tThe address`s been saved successfully!\n")
 
             else:
 
-                print("\n\tNo such name. You should create the contact first!\n")                                       # printing a message if no such name located
+                print("\n\tNo such name. You should create the contact first!\n")                                       
 
 
 
         elif(choice == 4):
 
-            name = input("\nEnter the contact`s name> ")                                                                # promting the user to enter the contat`s name
+            name = input("\nEnter the contact`s name> ")                                                                
 
-            if(name in name_email):                                                                                     # validating the input
+            if(name in name_email):                                                                                     
 
-                print("\nThe current email is: ", name_email[name])                                                     # displaying the current email 
-                change = input("Do you want to change it? (y/n)> ")                                                     # promting the user to select whether to change it
+                print("\nThe current email is: ", name_email[name])                                                      
+                change = input("Do you want to change it? (y/n)> ")                                                     
 
-                while(change.lower() != 'y' and change.lower() != 'n'):                                                 # validating the input
+                while(change.lower() != 'y' and change.lower() != 'n'):                                                 
 
                     print("'", change.lower(), "' cannot be a valid input.")
                     change = input("Try again> ")
 
                 if(change.lower() == 'y'):
 
-                     new_email = input("\nEnter the new e-mail address> ")                                              # promting the user to enter the new email
-                     name_email[name] = new_email                                                                       # modifying the value in name_email dict
-
+                     new_email = input("\nEnter the new e-mail address> ")                                              
+                     name_email[name] = new_email                                                                       
                      print("\n\tThe e-mail`s been changed successfully!\n")
 
                 else:
@@ -132,29 +110,29 @@ def main():
 
             else:
 
-                print("\n\tNo such name. You should create the contact first!\n")                                       # printing a message if no such name located
+                print("\n\tNo such name. You should create the contact first!\n")                                       
 
 
 
 
         elif(choice == 5):
 
-            name = input("\nEnter the contact`s name> ")                                                                # promting the user to enter the contact`s name
+            name = input("\nEnter the contact`s name> ")                                                                
 
-            if(name in name_email):                                                                                     # validating the input
+            if(name in name_email):                                                                                     
 
-                print("The current tepelhone number is: ", telephone[name])                                             # displaying the current telephone number
-                change = input("Do you want to change it? (y/n)> ")                                                     # promting the user to select whether to change it
+                print("The current tepelhone number is: ", telephone[name])                                             
+                change = input("Do you want to change it? (y/n)> ")                                                     
 
-                while(change.lower() != 'y' and change.lower() != 'n'):                                                 # validating the input
+                while(change.lower() != 'y' and change.lower() != 'n'):                                                 
 
                     print("'", change, "' cannot be a valid input.")
                     change = input("Try again> ")
 
                 if(change == 'y'):
 
-                    new_phone = input("\nEnter the new telephone number> ")                                             # promting the user to enter new telephone number
-                    telephone[name] = new_phone                                                                         # modifying the value in telephone dict
+                    new_phone = input("\nEnter the new telephone number> ")                                             
+                    telephone[name] = new_phone                                                                         
 
                     print("\n\tThe phone number`s been changed successfully!\n")
 
@@ -164,21 +142,21 @@ def main():
 
             else:
 
-                print("\n\tNo such name. You should create the contact first!\n")                                       # printing a message if no such name located
+                print("\n\tNo such name. You should create the contact first!\n")                                       
 
 
 
 
         elif(choice == 6):
 
-            name = input("\nEnter the contact`s name> ")                                                                # promting the user to enter the contact`s name
+            name = input("\nEnter the contact`s name> ")                                                                
 
-            if(name in name_email):                                                                                     # validating the input
+            if(name in name_email):                                                                                     
 
-                print("\nThe current address is: ", address[name])                                                      # displaying the current address
-                change = input("Do you want to change it? (y/n)> ")                                                     # promting the user to select whether to change it
+                print("\nThe current address is: ", address[name])                                                      
+                change = input("Do you want to change it? (y/n)> ")                                                     
 
-                while(change.lower() != 'y' and change.lower() != 'n'):                                                 # validating the input
+                while(change.lower() != 'y' and change.lower() != 'n'):                                                 
 
                     print("'", change, "' cannot be a valid input.")
                     change = input("Try again> ")
@@ -186,8 +164,8 @@ def main():
 
                 if(change.lower() == 'y'):
 
-                    new_address = input("\nEnter the new address> ")                                                    # prompting the user to enter the new address
-                    address[name] = new_address                                                                         # modifying the value in address dict
+                    new_address = input("\nEnter the new address> ")                                                    
+                    address[name] = new_address                                                                         
 
                     print("\n\tThe address`s been changed successfully!\n")
 
@@ -197,26 +175,26 @@ def main():
 
             else:
 
-                print("\n\tNo such name. You should create the contact first!\n")                                       # printing a message if no such name located
+                print("\n\tNo such name. You should create the contact first!\n")                                       
 
 
 
 
         elif(choice == 7):
 
-            name = input("\nEnter the contact`s name> ")                                                                # promting the user to enter the contact`s name
+            name = input("\nEnter the contact`s name> ")                                                                
 
-            if(name in name_email):                                                                                     # validating the input
+            if(name in name_email):                                                                                     
 
-                print("\n\tContact:\n")                                                                                 # printing the contact`s details
+                print("\n\tContact:\n")                                                                                 
                 print("Name:            ", name)
                 print("E-mail:          ", name_email[name])
                 print("Phone number:    ", telephone[name])
                 print("Address:         ", address[name])
 
-                delete = input("\nDelete (y/n)> ")                                                                      # prompting the user to select whether to delete it
+                delete = input("\nDelete (y/n)> ")                                                                      
         
-                while(delete.lower() != 'y' and delete.lower() != 'n'):                                                 # validating the input
+                while(delete.lower() != 'y' and delete.lower() != 'n'):                                                 
 
                     print("'", delete, "' cannot be a valid input.")
                     delete = input("Try agian> ")
@@ -224,9 +202,9 @@ def main():
 
                 if(delete == 'y'):
 
-                    del name_email[name]                                                                                # deleting the record in name_email dict
-                    del telephone[name]                                                                                 # deleting the record in telephone dict
-                    del address[name]                                                                                   # deleting the record in address dict
+                    del name_email[name]                                                                                
+                    del telephone[name]                                                                                 
+                    del address[name]                                                                                   
 
                     print("\n\tThe contact`s been deleted successfully!\n")
 
@@ -236,7 +214,7 @@ def main():
 
             else:
 
-                print("\n\tNo such name. You should create the contact first!\n")                                       # printing a messsage if no such name located
+                print("\n\tNo such name. You should create the contact first!\n")                                       
 
 
 
@@ -246,10 +224,10 @@ def main():
         elif(choice == 8):
 
             
-            delete = input("\nDo you want to delete all of the contacts? (y/n)> ")                                     # promting the user to select whether to keep or
-                                                                                                                       # to delete all of the contacts
+            delete = input("\nDo you want to delete all of the contacts? (y/n)> ")                                     
+                                                                                                                       
 
-            while(delete.lower() != 'y' and delete.lower() != 'n'):                                                    # validating the input
+            while(delete.lower() != 'y' and delete.lower() != 'n'):                                                    
 
                 print("'", delete, "' cannot be a valid input")
                 delete = input("Try again> ")
@@ -257,9 +235,9 @@ def main():
 
             if(delete.lower() == 'y'):
 
-                name_email.clear()                                                                                      # deleting the records in name_email dict
-                telephone.clear()                                                                                       # deleting the records in telephone dict
-                address.clear()                                                                                         # deleting the recordds in address dict
+                name_email.clear()                                                                                     
+                telephone.clear()                                                                                      
+                address.clear()                                                                                        
 
                 print("\nThe contacts has been erased!\n")
 
@@ -267,11 +245,11 @@ def main():
 
         elif(choice == 9):
 
-            print("\n\t", len(name_email), " record/s:\n")                                                              # printing a message with the number of the records
+            print("\n\t", len(name_email), " record/s:\n")                                                             
 
-            count = 0                                                                                                   # an integer to keep count of the contacts
+            count = 0                                                                                                  
 
-            for key in name_email:                                                                                      # dispalying the details for each record
+            for key in name_email:                                                                                     
 
                 count += 1
                 print("#", count, ":")
@@ -284,14 +262,14 @@ def main():
 
         else:
 
-            print("\n\tThe program has ended!\n")                                                                       # printing a message indicating that the program
-                                                                                                                        # has ended
+            print("\n\tThe program has ended!\n")                                                                      
+                                                                                                                       
 
 
 
 
 
-main()                                                                                                                  # calling the main function
+main()                                                                                                                 
 
 
 
