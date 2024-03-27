@@ -1,58 +1,40 @@
 
 
-
-
-        # A Python program that prompts 
-        # the user to create a file and to
-        # write user-defined number of integers
-        # into it.
-        #
-        # It then opens the file and reads the
-        # data into a list.
-        #
-        # The user can search for an integer 
-        # on the list or to quit by pressing '-1'.
-
-
-
-
-import output_file                                                                  # importing the output_file module
-import input_file                                                                   # importing the input_file module
-import Search_list                                                                  # impoting the Search_list module
+import output_file                                                                  
+import input_file                                                                   
+import Search_list                                                                  
 
 
 def main():
 
 
-    file_name = output_file.open_file()                                             # calling the open_file() function, assigning
-                                                                                    # the returned value to a variable
+    file_name = output_file.open_file()                                             
+                                                                                    
 
-    list_num = input_file.read_file(file_name)                                      # calling read_file() function with a parameter
-                                                                                    # for the name of the file and assigning the reuturned
-                                                                                    # value a variable
+    list_num = input_file.read_file(file_name)                                      
+                                                                                    
+                                                                                    
 
 
-    print("\nEnter the number you are searching for or press '-1' to quit> ")       # prompting the user to enter an integer 
+    print("\nEnter the number you are searching for or press '-1' to quit> ")        
     num = int(input())                                                              
 
-    while(num != -1):                                                               # entering the sentinel-controlled loop
+    while(num != -1):                                                               
 
 
-        Search_list.serch(list_num, num)                                            # calling search() function with parameters
-                                                                                    # for the list and thenputed number
+        Search_list.serch(list_num, num)                                            
+                                                                                    
 
-
-        print("\nEnter the number you are searching for or press '-1' to quit> ")   # promting the user to enter another integer
+        print("\nEnter the number you are searching for or press '-1' to quit> ")   
         num = int(input())
 
 
 
-    print("\nThe program has ended!\n")                                             # printing a message indicating that the
-                                                                                    # program has ended
+    print("\nThe program has ended!\n")                                             
 
 
 
 
-main()                                                                              # calling the main() function
+main()                                                                              
 
 
