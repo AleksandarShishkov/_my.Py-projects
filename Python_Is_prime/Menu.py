@@ -2,32 +2,31 @@
 
 
 
-def menu():                                                                                         # defining the menu() method
+def menu():                                                                                         
 
 
-    print("\n\tSelect between the follwiong:\n")                                                    # printing the options
+    print("\n\tSelect between the follwiong:\n")                                                    
     print("'1' to input a number")
     print("'2' to input range of numbers")
     print("'0' to quit")
 
-    try:                                                                                            # validating the input with try - except blocks
+    try:                                                                                            
 
-        choice = int(input("\n> "))                                                                 # promting the user to input the selected option
+        choice = int(input("\n> "))                                                                 
 
-        while(choice < 0 or choice > 2):                                                            # validating the input
+        while(choice < 0 or choice > 2):                                                            
 
             print("\nInvalid input")
             choice = int(input("Try again> "))
 
 
-        return choice                                                                               # returning choice
-
+        return choice                                                                               
 
     except ValueError:
 
         print("\nInvalid input.")                                                                   
-        choice = int(input("Try again> "))                                                          # promting the user to select again if
-                                                                                                    # an exception is caught
+        choice = int(input("Try again> "))                                                          
+                                                                                                    
 
 
 
