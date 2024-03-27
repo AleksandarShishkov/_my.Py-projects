@@ -1,54 +1,41 @@
 
 
-
-        # A Python program that prompts the
-        # user to create an instance of Data_Class
-        # class trough a list of options.
-        #
-        # The user can review the new profile or
-        # create new one.
-        #
-        # To exit the program option '0'
-        # shold be selected.
-
-
-
-import Data_Class                                                                       # importing Data_Class 
-import options                                                                          # importing options
+import Data_Class                                                                        
+import options                                                                          
 
 
 def main():
 
 
-    choice = 1                                                                          # an integer to hold the choice
-    exsProfile = False                                                                  # a boolean for an exsisting profile
+    choice = 1                                                                          
+    exsProfile = False                                                                  
 
      
 
-    while(choice != 0):                                                                 # cotrolled while loop
+    while(choice != 0):                                                                 
 
-        choice = options.options()                                                      # calling options() method
+        choice = options.options()                                                      
 
-        if(choice == 1):                                                                # validating the input
+        if(choice == 1):                                                                
 
-            exsProfile = True                                                           # setting exsProfile to True
-            profile = Data_Class.Data_Class()                                           # creating an instance of Data_Class class
+            exsProfile = True                                                           
+            profile = Data_Class.Data_Class()                                           
 
-            profile.set_name()                                                          # calling set_name() method
-            profile.set_age()                                                           # calling set_age() method
-            profile.set_address()                                                       # calling set_address() method
-            profile.set_phone()                                                         # calling set_phone() method
+            profile.set_name()                                                          
+            profile.set_age()                                                           
+            profile.set_address()                                                       
+            profile.set_phone()                                                         
 
 
         elif(choice == 2 and exsProfile):
 
             print('\nThe profile you`ve selected is:')
-            profile.print()                                                             # calling print() method
+            profile.print()                                                             
 
 
         elif(choice == 0):
 
-            break;                                                                      # breaking out of the loop
+            break;                                                                      
 
        
         else:
@@ -56,10 +43,10 @@ def main():
             print('\nInvalid input')
 
 
-    print('\nThe program has ended!\n')                                                 # a message indicating that the program
-                                                                                        # has ended
+    print('\nThe program has ended!\n')                                                 
+                                                                                        
 
 
-main()                                                                                  # calling main() function
+main()                                                                                  
 
 
