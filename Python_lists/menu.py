@@ -5,7 +5,7 @@
 def menu_option():                                                  
     
 
-    print("\n\tSelect between the following: \n")                               # printing the options in the menu                                            
+    print("\n\tSelect between the following: \n")                                                                           
     print("\t'1' to search an element on the list")
     print("\t'2' to sum the elements on the list")
     print("\t'3' to find the product of the elements on the list")
@@ -15,12 +15,12 @@ def menu_option():
     print("\t'0' to quit")
 
 
-    select = int(input("> "))                                                   # prompting the user to select an option
+    select = int(input("> "))                                                   
 
-    while(select < 0 or select > 6):                                            # validaing the input
+    while(select < 0 or select > 6):                                            
         print("\nInvalid input. Try again> ", end = ' ')
         select = int(input("> "))
 
-    return select                                                               # returning the input
+    return select                                                               
 
 
