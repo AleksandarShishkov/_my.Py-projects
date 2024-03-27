@@ -1,103 +1,91 @@
 
 
-
-                # This Python program simulates a quiz game.
-                # It it splayed by two players, the first to
-                # reach 5 points wins the game.
-                # 
-                # The program then promts the user to select
-                # whether new game will be loaded. If not
-                # the program terminates.
-
-
-
-
-import message                                                                                          # importing the message module
-import Question                                                                                         # importing the Question class
-import Players                                                                                          # importing the Players class
+import message                                                                                          
+import Question                                                                                         
+import Players                                                                                          
 
 
 
 def main():
 
 
-    message.message()                                                                                   # calling the message() method
+    message.message()                                                                                   
 
-    q = Question.Question()                                                                             # an instance of the Question class
-    pl = Players.Players()                                                                              # an isnace of the Players class
+    q = Question.Question()                                                                             
+    pl = Players.Players()                                                                              
 
-    newGame = True                                                                                      # a boolean to control the outer game loop
+    newGame = True                                                                                      
 
 
-    try:                                                                                                # try clause to check for exceptions
+    try:                                                                                                
 
         while(newGame):                                                                                 
 
-            pl.set_names()                                                                              # calling the set_names() method
+            pl.set_names()                                                                              
 
-            pl.set_who_first();                                                                         # calling the set_who_first() method
+            pl.set_who_first();                                                                         
 
-            q.set_questions_pl1()                                                                       # setting the questions for pl1
-            q.set_answers_pl1()                                                                         # setting the answers for pl1
-            q.set_questions_pl2()                                                                       # setting the questions for pl2
-            q.set_answers_pl2()                                                                         # setting the answers for pl2
+            q.set_questions_pl1()                                                                       
+            q.set_answers_pl1()                                                                         
+            q.set_questions_pl2()                                                                       
+            q.set_answers_pl2()                                                                         
 
-            q.set_keys_pl1()                                                                            # setting the keys for pl1
-            q.set_keys_pl2()                                                                            # setting the keys for pl2
+            q.set_keys_pl1()                                                                            
+            q.set_keys_pl2()                                                                            
     
-            questions_pl1 = q.get_questions_pl1()                                                       # a variable to hold the questions dict for pl1
-            answers_pl1 = q.get_answers_pl1()                                                           # a variable to hold the answers dict for pl1
-            questions_pl2 = q.get_questions_pl2()                                                       # a variable to hold the questions dict for pl2
-            answers_pl2 = q.get_answers_pl2()                                                           # a variable to hold the answers dict for pl2                   
+            questions_pl1 = q.get_questions_pl1()                                                       
+            answers_pl1 = q.get_answers_pl1()                                                           
+            questions_pl2 = q.get_questions_pl2()                                                       
+            answers_pl2 = q.get_answers_pl2()                                                                              
     
-            count_max = 6                                                                               # a variable to hold the max count for the disctionaries
+            count_max = 6                                                                               
         
-            while(pl.get_score_pl1() != 5 or pl.get_score_pl2() != 5):                                  # sentinel controlled inner game loop
+            while(pl.get_score_pl1() != 5 or pl.get_score_pl2() != 5):                                  
     
 
-                count = q.get_count()                                                                   # a variable to hold the count
+                count = q.get_count()                                                                   
 
             
 
 
-                if(pl.get_who_first() == 1):                                                            # validating who will begin first
+                if(pl.get_who_first() == 1):                                                            
 
 
-                    if(count in questions_pl1):                                                         # validating the key
+                    if(count in questions_pl1):                                                         
 
                         print("\n'", pl.get_name_pl1(), "' answer the question...\n")
-                        print(questions_pl1[count])                                                     # printing the question
-                        print(answers_pl1[count])                                                       # printing the options
+                        print(questions_pl1[count])                                                     
+                        print(answers_pl1[count])                                                       
 
-                        pl.set_ans_pl1()                                                                # promting the user to enter an option
+                        pl.set_ans_pl1()                                                                
 
                 
-                        if(pl.get_ans_pl1() != q.get_keys_pl1(count)):                                  # validating the input
+                        if(pl.get_ans_pl1() != q.get_keys_pl1(count)):                                  
 
                             print('\nIncorrect answer. Better luck next time!')
                             print("'", pl.get_name_pl1(), "' points: ", pl.get_score_pl1(), '\n')
 
                         else:
 
-                            pl.set_score_pl1()                                                          # adding 1 to the total score for pl1
+                            pl.set_score_pl1()                                                          
 
                             print('The correct answer is: ', pl.get_ans_pl1(), ' You`ve gained a point!\n')
                             print("'", pl.get_name_pl1(), "' points: ", pl.get_score_pl1(), '\n')
 
-                            if(pl.get_score_pl1() == 5):                                                # validating the number of points earned
+                            if(pl.get_score_pl1() == 5):                                                
                                 break
 
-                            q.if_correct_answer_pl1(count)                                              # setting the dictionaries with the correct amount of keys
+                            q.if_correct_answer_pl1(count)                                              
                     
                 
 
-                    if(count in questions_pl2):                                                         # validating the key
+                    if(count in questions_pl2):                                                         
 
 
                         print("\n'", pl.get_name_pl2(), "' answer the question...\n")
-                        print(questions_pl2[count])                                                     # printing the question                    
-                        print(answers_pl2[count])                                                       # printing the options
-                                                                                                        # promting the user to select an option
+                        print(questions_pl2[count])                                                                         
+                        print(answers_pl2[count])                                                       
+                                                                                                        
                         pl.set_ans_pl2()
 
                 
@@ -107,28 +95,28 @@ def main():
 
                         else:
 
-                            pl.set_score_pl2()                                                          # adding 1 to the total score for pl2
+                            pl.set_score_pl2()                                                          
 
                             print('The correct answer is: ', pl.get_ans_pl2(), '. You`ve gained a point!\n')
                             print("'", pl.get_name_pl2(), "' points: ", pl.get_score_pl2(), '\n')
 
-                            if(pl.get_score_pl2() == 5):                                                # validating the number of points earned
+                            if(pl.get_score_pl2() == 5):                                                
                                 break
 
-                            q.if_correct_answer_pl2(count)                                              # setting the dictionaries with the correct amount of keys
+                            q.if_correct_answer_pl2(count)                                              
                     
         
 
 
                 else:
 
-                    if(count in questions_pl2):                                                         # validating the key
+                    if(count in questions_pl2):                                                         
 
                         print("\n'", pl.get_name_pl2(), "' answer the question...\n")
-                        print(questions_pl2[count])                                                     # printing the question
-                        print(answers_pl2[count])                                                       # printing the option
+                        print(questions_pl2[count])                                                     
+                        print(answers_pl2[count])                                                       
 
-                        pl.set_ans_pl2()                                                                # prompting the user to select an option
+                        pl.set_ans_pl2()                                                                
 
                         if(pl.get_ans_pl2() != q.get_keys_pl2(count)):
                             print('\nIncorrect answer. Better luck next time!')
@@ -136,61 +124,59 @@ def main():
 
                         else:
 
-                            pl.set_score_pl2()                                                          # adding 1 to the total score for pl2
+                            pl.set_score_pl2()                                                          
 
                             print('The correct answer is: ', pl.get_ans_pl2(), '. You`ve gained a point!\n')
                             print("'", pl.get_name_pl2(), "' points: ", pl.get_score_pl2(), '\n')
 
-                            if(pl.get_score_pl2() == 5):                                                # validating the number of points earned
+                            if(pl.get_score_pl2() == 5):                                                
                                 break
 
-                            q.if_correct_answer_pl2(count)                                              # setting the dictionarie swith the correct amount of keys
+                            q.if_correct_answer_pl2(count)                                              
                     
 
 
-                    if(count in questions_pl1):                                                         # validating the key
+                    if(count in questions_pl1):                                                         
             
                         print("\n'", pl.get_name_pl1(), "' answer the question...\n")
-                        print(questions_pl1[count])                                                     # printing the question
-                        print(answers_pl1[count])                                                       # printing the option
+                        print(questions_pl1[count])                                                     
+                        print(answers_pl1[count])                                                       
 
-                        pl.set_ans_pl1()                                                                # promting the user to select an option
+                        pl.set_ans_pl1()                                                                
 
-                        if(pl.get_ans_pl1() != q.get_keys_pl1(count)):                                  # validating the input     
+                        if(pl.get_ans_pl1() != q.get_keys_pl1(count)):                                       
 
                             print('\nIncorrect answer. Better luck next time!')
                             print("'", pl.get_name_pl1(), "' points: ", pl.get_score_pl1(), '\n')
 
                         else:
 
-                            pl.set_score_pl1()                                                          # adding 1 to the total score for player1
+                            pl.set_score_pl1()                                                          
 
                             print('The correct answer is: ', pl.get_ans_pl1(), '. You`ve gained a point!\n')
                             print("'", pl.get_name_pl1(), "' points: ", pl.get_score_pl1(), '\n')
 
-                            if(pl.get_score_pl1() == 5):                                                # validating the number of points earned
+                            if(pl.get_score_pl1() == 5):                                                
                                 break
 
-                            q.if_correct_answer_pl1(count)                                              # setting the dictionaries with the correct amount of keys
-                    
+                            q.if_correct_answer_pl1(count)                                                                  
 
 
 
 
-                q.set_count()                                                                           # adding one to count
+                q.set_count()                                                                           
 
 
-                if(count == count_max):                                                                 # validating the count
+                if(count == count_max):                                                                 
 
-                    q.null_count()                                                                      # re-setting the counter if counter = 6
+                    q.null_count()                                                                      
 
                     
                 print('\n')
 
 
 
-            if(pl.get_score_pl1() == 5):                                                                # validating the winner, printing a message
-
+            if(pl.get_score_pl1() == 5):                                                                
                 print("'", pl.get_name_pl1(), "' has won the game! Congrats!\n")                        
 
             else:
@@ -198,28 +184,28 @@ def main():
                 print("'", pl.get_name_pl2(), "' has won the game! Congrats!\n")
 
 
-            anotherGame = input('New game? (y/n)> ')                                                    # promting the user to select new game
+            anotherGame = input('New game? (y/n)> ')                                                    
 
-            while(anotherGame != 'y' and anotherGame != 'n'):                                           # validating the input
+            while(anotherGame != 'y' and anotherGame != 'n'):                                           
 
                 print('\nInvalid input. Try again> ')
                 anotherGame = input('(y/n)> ')
 
             if(anotherGame == 'y'):
                 print("\nYou`ve selected another game.\n")
-                newGame = True                                                                          # setting newGame to true
+                newGame = True                                                                          
 
             else:
 
-                print('\nThe program has ended!\n')                                                     # printing a message indicating that the program has ended
-                newGame = False                                                                         # setting newGame to fale
+                print('\nThe program has ended!\n')                                                     
+                newGame = False                                                                         
 
 
 
 
-    except:                                                                                             # an except clause to catch exceptions
+    except:                                                                                             
 
-        print('\nAn error has occurred!\n')                                                             # printing an erroneus message
+        print('\nAn error has occurred!\n')                                                             
 
 
 
