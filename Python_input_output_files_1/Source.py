@@ -1,55 +1,36 @@
 
 
 
-
-        # # # # # # # # # # # # # # # # # # # # # # # # #
-        # 
-        #  This Python program prompts the user to enter 
-        #  series of string on a newly created .txt file.
-        #  It provides a sentinel value to control the   
-        #  number of entered data, validates the input   
-        #  and prints the output on the screen.           
-        #                                               
-        #  The program also asks the user to choose      
-        #  whether another string will be added to the   
-        #  existing file.                                
-        #                                               
-        # # # # # # # # # # # # # # # # # # # # # # # # #
+import o_file                                                                           
+import i_file                                                                           
+import re_open_file                                                                     
 
 
 
 
-
-import o_file                                                                           # importing the o_file module
-import i_file                                                                           # importing the i_file module
-import re_open_file                                                                     # importing the re_open_file module
-
-
-
-
-def main():                                                                             # delcaring the main() fumnction
+def main():                                                                             
 
 
     
 
-    o_file.file_output()                                                                # callingthe file_output() function
-    i_file.file_input()                                                                 # calling the file_input() function
+    o_file.file_output()                                                                
+    i_file.file_input()                                                                 
 
-    new_name = input("\n\tDo you want to add a name? (y/n)> ")                          # prompting the user to select whether 
-                                                                                        # another name will be added
-    if(new_name == 'y' or new_name == 'Y'):                                             # validating the input
+    new_name = input("\n\tDo you want to add a name? (y/n)> ")                           
+                                                                                        
+    if(new_name == 'y' or new_name == 'Y'):                                             
 
-        re_open_file.re_enter()                                                         # calling re_enter() function
-        i_file.file_input()                                                             # calling the file_input() function
+        re_open_file.re_enter()                                                         
+        i_file.file_input()                                                             
 
     else:
-        print("\nThe program has ended!\n")                                             # printing message that the program`s ended
+        print("\nThe program has ended!\n")                                             
 
 
-    exit(0)                                                                             # exiting the program
+    exit(0)                                                                             
 
 
-main()                                                                                  # calling the main() function
+main()                                                                                  
 
 
 
