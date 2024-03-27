@@ -2,28 +2,25 @@
 
 
 
-def i_file():                                                   # deckaring the i_file() function
-
+def i_file():                                                   
     
     print("\n\tThe numbers are: \n")
 
-    input = open("numbers.txt", 'r')                            # opening the file for reading
-    numbersStr = input.readline()                               # assigning a line to the
-                                                                # numbersStr variable
-
-    while numbersStr != '':                                     # validating the file content
+    input = open("numbers.txt", 'r')                            
+    numbersStr = input.readline()                               
+                                                                
+    while numbersStr != '':                                     
         
-        numbers = int(numbersStr)                               # converting numbersStr to an 
-                                                                # integer
+        numbers = int(numbersStr)                                
+                                                                
 
-        print(numbers, end = ' ')                               # printing the numbers
-        numbersStr = input.readline()                           # assigning the next line to the
-                                                                # numbersStr variable
-            
+        print(numbers, end = ' ')                               
+        numbersStr = input.readline()                           
+                                                                            
     
 
     
-    input.close()                                               # closing the file
+    input.close()                                               
 
 
 
