@@ -1,20 +1,18 @@
 
 
 
-def file_input():                                                                       # declaring the file_input() function
+def file_input():                                                                       
+    input_file = open("Names.txt", 'r')                                                 
 
-    input_file = open("Names.txt", 'r')                                                 # opening the .txt file for reading
+    name = input_file.readline()                                                        
 
-    name = input_file.readline()                                                        # reading a line to the variable name
-
-    while (name != ''):                                                                 # validating the lines read
+    while (name != ''):                                                                 
 
         name = name.rstrip('\n')
         print(name)
         name = input_file.readline()
 
 
-    input_file.close()                                                                  # closing the .txt file
-
+    input_file.close()                                                                  
 
 
