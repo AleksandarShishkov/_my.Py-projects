@@ -2,64 +2,64 @@
 
 
 
-class Data_Class():                                                         # class Data_Class
+class Data_Class():                                                         
     
-    __name = ' '                                                            # a string to hold the name
-    __age = ' '                                                             # an integer to hold the age
-    __address = ' '                                                         # a string to hold the address
-    __phone = ' '                                                           # an integer to hold the phone
+    __name = ' '                                                            
+    __age = ' '                                                             
+    __address = ' '                                                         
+    __phone = ' '                                                           
 
-    def __init__(self):                                                     # default constructor
+    def __init__(self):                                                     
 
         self.__name = ' '
         self.__age = ' '
         self.__address = ' '
         self.__phone = ' '
 
-    def set_name(self):                                                     # set_name() method
+    def set_name(self):                                                     
 
-        self.__name = input('\nEnter the name> ')                           # promting the user to enter the name
+        self.__name = input('\nEnter the name> ')                           
 
 
-    def set_age(self):                                                      # set_age() method
+    def set_age(self):                                                      
 
-        print('\nEnter the age of ', self.__name, end = '')                 # promting the user to enter the age
+        print('\nEnter the age of ', self.__name, end = '')                 
         self.__age = int(input('> '))
 
 
-    def set_address(self):                                                  # set_address() methtod
+    def set_address(self):                                                  
 
-        self.__address = input('\nEnter the address> ')                     # promting the user to enter the address
-
-
-    def set_phone(self):                                                    # set_phone() method
-
-        self.__phone = int(input('\nEnter the phone> '))                    # promting the user to enter the phone
+        self.__address = input('\nEnter the address> ')                     
 
 
-    def get_name(self):                                                     # getter for the name
+    def set_phone(self):                                                    
+
+        self.__phone = int(input('\nEnter the phone> '))                    
+
+
+    def get_name(self):                                                     
 
         return self.__name
 
 
-    def get_age(self):                                                      # getter for the age
+    def get_age(self):                                                      
 
         return self.__age
 
 
-    def get_address(self):                                                  # getter for the address
+    def get_address(self):                                                  
 
         return self.__address
 
 
-    def get_phone(self):                                                    # getter for the phone
+    def get_phone(self):                                                    
 
         return self.__phone
 
 
 
-    def print(self):                                                        # print() method
-                                                                            # printing the output
+    def print(self):                                                        
+                                                                            
         print('\nName:        ' + self.__name)
         print('Age:        ', self.__age)
         print('Address:    ', self.__address)
