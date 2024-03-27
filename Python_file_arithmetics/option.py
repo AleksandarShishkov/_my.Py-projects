@@ -2,230 +2,222 @@
 
 
 
-def user_option(choice):                                        # declaring the user_option()
-                                                                # function, passing the user`s
-                                                                # choice as a parameter
+def user_option(choice):                                        
+                                                                
+                                                                
 
-   if(choice == 'w'):                                           # validating the user`s input
+   if(choice == 'w'):                                           
        print("\n\tYou have selected to re-write " +\
            "\n\tthe file. Enter the new digits or " +\
            "\n\ttype '-1' to quit entering> ")
 
-       try:                                                     # entering the try block
+       try:                                                     
 
-           output = open("numbers.txt", 'w')                    # opening the file
-           num = int(input("\nEnter an integer> "))             # prompting the user to enter
-                                                                # an integer
+           output = open("numbers.txt", 'w')                    
+           num = int(input("\nEnter an integer> "))             
+                                                                
         
-           while(num != -1):                                    # validating the input
+           while(num != -1):                                    
 
                if(num != -1):
-                   output.write(str(num) + '\n')                # writing the input to the
-                                                                # file
+                   output.write(str(num) + '\n')                
+                                                                
 
                num = int(input("\nEnter an integer> "))
 
 
-           output.close()                                       # closing the .txt file
+           output.close()                                       
 
-       except ValueError:                                       # entering the exception block
-           print("\nInvalid value passed!\n")                   # if an exception is detected
+       except ValueError:                                       
+           print("\nInvalid value passed!\n")                   
 
        print("\nThe file has been re-written " +\
            "\nsuccessfully\n")
 
-   elif(choice == 'r'):                                         # validating the user`s input
+   elif(choice == 'r'):                                         
         
        print("\n\tYou have selected to review " +\
            "\n\tthe file. The numbers are: \n")
 
-       input_file = open("numbers.txt", 'r')                    # opening the .txt file for
-                                                                # reading
+       input_file = open("numbers.txt", 'r')                    
+                                                                
 
-       numbersStr = input_file.readline()                       # assigning the first line to 
-                                                                # the numbersStr variable
-
-       while numbersStr != '':                                  # validating the .txt content
+       numbersStr = input_file.readline()                        
+                                                                
+       while numbersStr != '':                                  
         
-           numbers = int(numbersStr)                            # converting numbersStr to an
-                                                                # integer
-           print(numbers, end = ' ')                            # printing the result
-           numbersStr = input_file.readline()                   # redeing the next line
+           numbers = int(numbersStr)                            
+                                                                
+           print(numbers, end = ' ')                            
+           numbersStr = input_file.readline()                   
             
     
 
     
-       input_file.close()                                       # closing the .txt file
+       input_file.close()                                       
        print('\n')
 
    
-   elif(choice == 'a'):                                         # validating the user`s input
+   elif(choice == 'a'):                                         
        print("\n\tYou have selected to add data " +\
            "\n\tto the file. Add the new digits or " +\
            "\n\ttype '-1' to quit adding> ")
 
-       try:                                                     # entering the try block
+       try:                                                     
 
-           output = open("numbers.txt", 'a')                    # opening the .txt file with 
-                                                                # 'a' mode
+           output = open("numbers.txt", 'a')                     
+                                                                
 
-           number = int(input("\nAdd an integer> "))            # prompting the user to add
-                                                                # an integer
+           number = int(input("\nAdd an integer> "))            
+                                                                
         
-           while(number != -1):                                 # validating the input
+           while(number != -1):                                 
 
                if(number != -1):
-                   output.write(str(number) + '\n')             # writing the input to the file
+                   output.write(str(number) + '\n')             
 
-               number = int(input("\nEnter an integer> "))      # promting the user to enter
-                                                                # another integer
+               number = int(input("\nEnter an integer> "))                                                                      # another integer
 
                
-           output.close()                                       # closing the .txt file
+           output.close()                                       
 
 
-       except ValueError:                                       # entering the exception block
-           print("\nInvalid value passed!\n")                   # if an exception is detected
+       except ValueError:                                       
+           print("\nInvalid value passed!\n")                   
 
        print("\nThe new data has been added "+\
            "\nsuccessfully\n")
 
 
-   elif(choice == "sum"):                                       # valdiating the user`s input
+   elif(choice == "sum"):                                       
       print("\n\tYou have selected to sum the data. " +\
           "\n\n\tThe result is:", end = ' ')
 
-      input_file = open("numbers.txt", 'r')                     # opening the .txt file for 
-                                                                # reading
+      input_file = open("numbers.txt", 'r')                      
+                                                                
+      numbersStr = input_file.readline()                        
+                                                                
+      total = 0                                                 
+                                                                
 
-      numbersStr = input_file.readline()                        # assigning the first line to
-                                                                # the numbersStr variable
-
-      total = 0                                                 # an integer to hold the total
-                                                                # of the summed integers
-
-      while numbersStr != '':                                   # validating the file`s content
+      while numbersStr != '':                                   
         
-          numbers = int(numbersStr)                             # converting numbersStr to an
-                                                                # integer
-          total += numbers                                      # adding every next number to
-                                                                # the total variable
-          numbersStr = input_file.readline()                    # reading the next line
+          numbers = int(numbersStr)                             
+                                                                
+          total += numbers                                      
+                                                                
+          numbersStr = input_file.readline()                    
       
-      print("'", total, "'\n")                                  # printing the output
+      print("'", total, "'\n")                                  
     
-      input_file.close()                                        # closing the file
+      input_file.close()                                        
 
 
-   elif(choice == "substr"):                                    # validating the user`s input
+   elif(choice == "substr"):                                    
      print("\n\tYou have selected to substract " +\
          "\n\t the file`s data. " +\
          "\n\tThe result is:", end = ' ')
 
-     input_file = open("numbers.txt", 'r')                      # opening the .txt file for
-                                                                # reading
+     input_file = open("numbers.txt", 'r')                      
+                                                                
 
-     numbersStr = input_file.readline()                         # reading the first line
+     numbersStr = input_file.readline()                         
 
-     substr = int(numbersStr)                                   # assigning the first line
-                                                                # to the subtr variable
+     substr = int(numbersStr)                                   
+                                                                
 
-     while numbersStr != '':                                    # validating the file`s content
+     while numbersStr != '':                                    
         
-         numbers = int(numbersStr)                              # converting numbersStr to
-                                                                # an integer
-         substr -= numbers                                      # substracting substr by numbers
-         numbersStr = input_file.readline()                     # reading the next line
+         numbers = int(numbersStr)                              
+                                                                
+         substr -= numbers                                      
+         numbersStr = input_file.readline()                     
       
-     print("'", substr, "'\n")                                  # printing the output
-    
-     input_file.close()                                         # closing the .txt file
+     print("'", substr, "'\n")                                      
+     input_file.close()                                         
     
 
-   elif(choice == "multiply"):                                  # validating the user`s input
+   elif(choice == "multiply"):                                  
     print("\n\tYou have selected to multiply " +\
         "\n\tthe file`s data. " +\
         "\n\tThe result is:", end = ' ')
 
-    input_file = open("numbers.txt", 'r')                       # opening the .txt file for
-                                                                # reding
+    input_file = open("numbers.txt", 'r')                       
+                                                                
 
-    numbersStr = input_file.readline()                          # assigning the firts line to 
-                                                                # numberStr variable
+    numbersStr = input_file.readline()                           
+                                                                
+    mult = int(numbersStr)                                      
+                                                                
 
-    mult = int(numbersStr)                                      # assigning the first number
-                                                                # to the mult variable
-
-    while numbersStr != '':                                     # validating the file`s content
+    while numbersStr != '':                                     
         
-        numbers = int(numbersStr)                               # converting numbersStr to an
-                                                                # integer
-        mult *= numbers                                         # multiplying mult by numbers
-        numbersStr = input_file.readline()                      # reading the next line
+        numbers = int(numbersStr)                               
+                                                                
+        mult *= numbers                                         
+        numbersStr = input_file.readline()                      
       
-    print("'", mult, "'\n")                                     # printing the result
+    print("'", mult, "'\n")                                     
 
-    input_file.close()                                          # closing the .txt file
+    input_file.close()                                          
 
 
-   elif(choice == "divide"):                                    # validating the user`s input
+   elif(choice == "divide"):                                    
     print("\n\tYou have selected to divide " +\
         "\n\t the file`s data. " +\
         "\n\tThe result is:", end = ' ')
 
-    input_file = open("numbers.txt", 'r')                       # opening the .txt file for
-                                                                # reading
-
-    numbersStr = input_file.readline()                          # reading the first line
+    input_file = open("numbers.txt", 'r')                       
+                                                                
+    numbersStr = input_file.readline()                          
        
-    divide = float(numbersStr)                                  # assigning the furst line to 
-                                                                # diuvide variable
+    divide = float(numbersStr)                                   
+                                                                
 
-    while numbersStr != '':                                     # validating the file`s content
+    while numbersStr != '':                                     
         
-        numbers = float(numbersStr)                             # converting numbersStr to a
-                                                                # float
-        divide /= numbers                                       # dividing divide by numbers
-        numbersStr = input_file.readline()                      # reading the next line
+        numbers = float(numbersStr)                             
+                                                                
+        divide /= numbers                                       
+        numbersStr = input_file.readline()                      
       
-    print("'", format(divide, '.10f'), "'\n")                    # printing the result
+    print("'", format(divide, '.10f'), "'\n")                   
 
-    input_file.close()                                          # closing the .txt file
+    input_file.close()                                          
 
 
-   elif(choice == "avrg"):                                      # validating the user`s input
+   elif(choice == "avrg"):                                      
     print("\n\tYou have selected to calculate " +\
        "\n\tthe file`s data average. " +\
        "\n\tThe result is:", end = ' ')
     
-    input_file = open("numbers.txt", 'r')                       # opening the .txt file for
-                                                                # reading
+    input_file = open("numbers.txt", 'r')                       
+                                                                
+    numbersStr = input_file.readline()                          
 
-    numbersStr = input_file.readline()                          # reading the first line
+    count = 0                                                   
+                                                                
+    total = 0                                                   
+                                                                
 
-    count = 0                                                   # an integer to hold a running
-                                                                # total for the file`s contents
-    total = 0                                                   # a float to hold the average of
-                                                                # the numbers
-
-    while numbersStr != '':                                     # validating the file`s content
+    while numbersStr != '':                                     
         
-        numbers = int(numbersStr)                               # converting numbersStr to an
-                                                                # integer
-        total += numbers                                        # adding numbers to total
-        numbersStr = input_file.readline()                      # reading the next line
-        count += 1                                              # adding 1 to count
+        numbers = int(numbersStr)                               
+                                                                
+        total += numbers                                        
+        numbersStr = input_file.readline()                      
+        count += 1                                              
     
-    average = float(total / count)                              # calculating the average
-    print("'", format(average, '.2f'), "'\n")                   # pringing the formatted
-                                                                # output
+    average = float(total / count)                              
+    print("'", format(average, '.2f'), "'\n")                   
+                                                                
 
-    input_file.close()                                          # closing the file
+    input_file.close()                                          
 
 
-   elif(choice == '0'):                                         # validating the user`s input
+   elif(choice == '0'):                                         
 
-                                                                # printing a message
+                                                                
     print("\n\tYou have selected to quit " +\
        "\n\tthe program. \n\n")
 
