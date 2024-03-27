@@ -1,7 +1,7 @@
 
 
    
-def showMessage():                                                                  # defining showMessage() function
+def showMessage():                                                                  
     print('\n\n\tThis is a guessing game. You should try to '\
         '\n\tguess a number in a range of 1 trough 100. If you do, '\
         '\n\tyou earn a point.\n\n\tThere will be a counter which will '\
@@ -10,6 +10,6 @@ def showMessage():                                                              
         "\n\tTo quit press '0'\n\n"\
         '\n\tGood luck!. . .\n\n')
 
-    input('\n\tPress <Enter> to begin!\n')                                          # prompting the user to press <Enter>
+    input('\n\tPress <Enter> to begin!\n')                                          
 
 
