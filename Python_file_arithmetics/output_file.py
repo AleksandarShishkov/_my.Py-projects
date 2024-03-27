@@ -2,7 +2,7 @@
 
 
 
-def o_file():                                                   # declaring the o_file() function
+def o_file():                                                   
 
     
     
@@ -10,29 +10,29 @@ def o_file():                                                   # declaring the 
         "\n\tTo quit entering type '-1'\n")
 
         
-    try:                                                       # entering the try block
+    try:                                                       
 
-        output = open("numbers.txt", 'w')                      # creating a .txt file
+        output = open("numbers.txt", 'w')                      
 
-        number = int(input("\nEnter an integer> "))            # prompting the user to enter
-                                                               # an integer        
-        while(number != -1):                                   # validating the input
+        number = int(input("\nEnter an integer> "))            
+                                                                       
+        while(number != -1):                                   
 
             if(number != -1):
-                output.write(str(number) + '\n')               # writting the input to the file
+                output.write(str(number) + '\n')               
 
             number = int(input("\nEnter an integer> "))        
 
 
-        output.close()                                         # closing the file
+        output.close()                                         
 
-    except ValueError:                                         # entering the exception block
-        print("\nInvalid value passed!\n")                     # if an exception is detected
+    except ValueError:                                         
+        print("\nInvalid value passed!\n")                     
 
 
     print("\n\tThe datas`s been written to the file")
-    input("\nTo continue press <Enter> . . .")                 # prompting the user to press
-                                                               # <Enter> in order to continue
+    input("\nTo continue press <Enter> . . .")                 
+                                                               
 
 
 
