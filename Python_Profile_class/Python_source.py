@@ -1,59 +1,41 @@
 
-
-
-        # A Python program that creates an instance 
-        # of a class and promts the user to set it`s
-        # attributes so they can be
-        # stored in a dictionary. 
-        # 
-        # Trough a menu the user can manipulate
-        # the enrtered data. 
-        #
-        # Once done, the user can exit the program
-        # by sleecting '0' from the options.
-
-
-
-
-
             
-import Profile_class                                                                            # importing Profile_class
-import options                                                                                  # importing options
-import options_                                                                                 # importing options_
+import Profile_class                                                                            
+import options                                                                                  
+import options_                                                                                 
 
 
 def main():
 
-    choice = 1                                                                                  # an integer to hold the selected
-                                                                                                # option form the outer menu
+    choice = 1                                                                                  
+                                                                                                
 
-    profName = {}                                                                               # an empty dictionary for the names
-    profDept = {}                                                                               # an empty dictionary for the depts
-    profJob = {}                                                                                # an empty dictionary for the job titles
+    profName = {}                                                                               
+    profDept = {}                                                                               
+    profJob = {}                                                                                
 
-    key = ' '                                                                                   # an integer to hold the key
+    key = ' '                                                                                   
 
-    profile = Profile_class.Profile_class()                                                     # an instance of Profile_class
+    profile = Profile_class.Profile_class()                                                     
 
-    try:                                                                                        # try - except statement for input
-                                                                                                # validation
+    try:                                                                                        
+                                                                                                
+        while(choice != 0):                                                                     
 
-        while(choice != 0):                                                                     # entering the outer loop
+            choice = options.options()                                                          
 
-            choice = options.options()                                                          # calling options() method
-
-            if(choice == 1):                                                                    # validating the input
+            if(choice == 1):                                                                    
 
 
-                key = int(input('\nEnter the profile`s ID> '))                                  # prompting ther user to enter
-                                                                                                # the profile`s ID
+                key = int(input('\nEnter the profile`s ID> '))                                  
+                                                                                                
 
-                if(key not in profName):                                                        # validating the input
+                if(key not in profName):                                                        
 
                     print('\nYou should create a profile first!')
 
                 else:
-                                                                                                # printing the output
+                                                                                                
                     print('\nProfile ID:     ', key)
                     print('\nName:           ', profName[key])
                     print('Department:     ', profDept[key])
@@ -63,22 +45,20 @@ def main():
 
             elif(choice == 2):
 
-                profile.set_ID()                                                                # promting the user to set
-                                                                                                # the ID
-                key = profile.get_ID()                                                          # assigning the value to key
+                profile.set_ID()                                                                
+                                                                                                
+                key = profile.get_ID()                                                          
 
-                if(key not in profName):                                                        # validating the key
+                if(key not in profName):                                                        
 
-                    profile.set_name()                                                          # calling the setter for the name
-                    profile.set_dept()                                                          # calling the setter for the dept
-                    profile.set_job_title()                                                     # calling the setter for the job title
+                    profile.set_name()                                                          
+                    profile.set_dept()                                                          
+                    profile.set_job_title()                                                     
 
-                    profName[key] = profile.get_name()                                          # adding the name to profName dictionary
+                    profName[key] = profile.get_name()                                          
+                    profDept[key] = profile.get_dept()                                          
 
-                    profDept[key] = profile.get_dept()                                          # adding the dept to profDept dictionary
-
-                    profJob[key] = profile.get_job_title()                                      # adding the job title to profJob dictionary
-
+                    profJob[key] = profile.get_job_title()                                      
                     print('\nThe new profile`s been added!')
 
                 else:
@@ -88,33 +68,32 @@ def main():
 
             elif(choice == 3):
 
-                choice_ = 1                                                                     # an integer to hold the selected
-                                                                                                # option from the inner menu
+                choice_ = 1                                                                     
+                                                                                                
 
-                while(choice_ != 0):                                                            # validating the selected option
+                while(choice_ != 0):                                                            
 
-                    choice_ = options_.options_()                                               # calling options_() method
+                    choice_ = options_.options_()                                               
 
                     if(choice_ == 1):                                                           
 
                         print('\n')
 
-                        key = int(input('Enter the profile`s ID or 0 to quit> '))               # promting the user to enter the
-                                                                                                # profile`s ID
+                        key = int(input('Enter the profile`s ID or 0 to quit> '))               
+                                                                                                
 
-                        if(key in profName):                                                    # valdiating the key
+                        if(key in profName):                                                    
 
-                            profile.set_name()                                                  # calling the setter for the name
-                            profName[key] = profile.get_name()                                  # assigning the input to the
-                                                                                                # key value in profName
+                            profile.set_name()                                                  
+                            profName[key] = profile.get_name()                                  
+                                                                                                
 
                             print('\nThe name`s been changed!')
 
                         elif(key == 0):
 
-                            print('\nTo the options. . .')                                      # exiting the if-elif-else 
-                            continue                                                            # statement
-
+                            print('\nTo the options. . .')                                       
+                            continue                                                            
                         else:
 
                             print('\nNo such a profile!')
@@ -124,23 +103,21 @@ def main():
 
                         print('\n')
 
-                        key = int(input('Enter the profile`s ID or 0 to quit> '))               # promting the user to enter the
-                                                                                                # profile`s ID
+                        key = int(input('Enter the profile`s ID or 0 to quit> '))               
+                                                                                                
 
-                        if(key in profDept):                                                    # validating  input
+                        if(key in profDept):                                                    
 
-                            profile.set_dept()                                                  # calling the setter for the dept
-                            profDept[key] = profile.get_dept()                                  # assigning the input to the
-                                                                                                # key value in profDept
-
+                            profile.set_dept()                                                  
+                            profDept[key] = profile.get_dept()                                  
+                                                                                                
                             print('\nThe department`s been changed!')
 
 
                         elif(key == 0):
 
-                            print('\nTo the options. . .')                                      # exiting the if-elif-else
-                            continue                                                            # statement
-
+                            print('\nTo the options. . .')                                      
+                            continue                                                            
                         else:
 
                             print('\nNo such a profile!')
@@ -150,23 +127,20 @@ def main():
 
                         print('\n')
 
-                        key = int(input('Enter the profiles` ID or 0 to quit> '))               # promting the user to enter the
-                                                                                                # profile`s ID
+                        key = int(input('Enter the profiles` ID or 0 to quit> '))               
+                                                                                                
 
-                        if(key in profJob):                                                     # validating the input
-
-                            profile.set_job_title()                                             # calling the setter for the 
-                                                                                                # job title
-                            profJob[key] = profile.get_job_title()                              # assigning the input to the
-                                                                                                # key value in profJob
-
+                        if(key in profJob):                                                     
+                            profile.set_job_title()                                              
+                                                                                                
+                            profJob[key] = profile.get_job_title()                              
+                                                                                                
                             print('\nThe job title`s been changed!')
 
                         elif(key == 0):
 
-                            print('\nTo the options. . .')                                      # exiting the if-elif-else
-                            continue                                                            # statement
-
+                            print('\nTo the options. . .')                                      
+                            continue                                                            
                         else:
 
                             print('\nNo such a profile!')
@@ -174,7 +148,7 @@ def main():
 
                     elif(choice_ == 0):
 
-                        print('\nTo the main. . .')                                             # exiting the inner loop
+                        print('\nTo the main. . .')                                             
                         break
 
 
@@ -185,31 +159,30 @@ def main():
 
             elif(choice == 4):
 
-                key = int(input('\nEnter the profile`s ID> '))                                  # promting the user to enter the                        
-                                                                                                # profile`s ID
+                key = int(input('\nEnter the profile`s ID> '))                                                          
+                                                                                                
 
-                if(key in profName):                                                            # validating the input
+                if(key in profName):                                                            
 
-                    print('\nProfile ID:      ', key)                                           # printing the result
+                    print('\nProfile ID:      ', key)                                           
                     print('\nName:            ', profName[key])
                     print('Department:      ', profDept[key])
                     print('Job title:       ', profJob[key])
 
-                    delete = input('\nDelete the pfile (y/n)> ')                                # promting the user to select
-                                                                                                # whether  the datawill be deleted
+                    delete = input('\nDelete the pfile (y/n)> ')                                
+                                                                                                
 
-                    if(delete.lower() == 'y'):                                                  # validating the input
+                    if(delete.lower() == 'y'):                                                  
 
-                        del profName[key]                                                       # deleting the key in profName
-                        del profDept[key]                                                       # deleting the key in profDept
-                        del profJob[key]                                                        # deleting the key in profJob
-
+                        del profName[key]                                                       
+                        del profDept[key]                                                       
+                        del profJob[key]                                                        
                         print('\nThe profile`s been deleted!')
 
                     elif(delete.lower() == 'n'):
 
-                        print('\nNo changes made!')                                             # exiting the if-elif-else
-                        break                                                                   # statement
+                        print('\nNo changes made!')                                             
+                        break                                                                   
                             
                     else:
 
@@ -219,14 +192,14 @@ def main():
 
             elif(choice == 5):
 
-                print('\nNumber of profiles: ', len(profName))                                  # printing the number of
-                                                                                                # the records
+                print('\nNumber of profiles: ', len(profName))                                  
+                                                                                                
 
             elif(choice == 6):
 
                 count = 0;
 
-                for key in profName:                                                            # printing the records
+                for key in profName:                                                            
 
                     count += 1
                     print('\n#', count, sep ='')
@@ -239,12 +212,11 @@ def main():
 
     except:
 
-        print('\nAn error has occured!\n')                                                      # a message if an exception
-                                                                                                # is caught
+        print('\nAn error has occured!\n')                                                      
+                                                                                                
     else:
 
-        print('\nThe program has ended!\n')                                                     # a messsage indicating
-                                                                                                # the end of the program
+        print('\nThe program has ended!\n')                                                                                                                                                     # the end of the program
 
 
 main()
