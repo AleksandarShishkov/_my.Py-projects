@@ -2,12 +2,12 @@
 
 
 
-def convert_capital(user):                                                              # defining convert_capital method with a parameter 
-                                                                                        # for the string
+def convert_capital(user):                                                               
+                                                                                        
 
 
-    print('\nString: ', user)                                                           # printing the string
-    print('Upper-case: ', end = '')                                                     # printing the string with the converted letters
+    print('\nString: ', user)                                                           
+    print('Upper-case: ', end = '')                                                     
 
     for i in range(len(user)):
 
@@ -26,9 +26,3 @@ def convert_capital(user):                                                      
         else:
 
             print(user[i], end = '')
-
-
-        
-
-    
-    
