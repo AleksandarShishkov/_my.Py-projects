@@ -1,9 +1,4 @@
 
-
-
-#This is a simple Python program that calculates the income of the tickets sold for a football game. 
-#The amount for a ticket very from $9 to $15 in dependence of the seat taken.
-
 def main():
 
     message()
