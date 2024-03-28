@@ -2,46 +2,46 @@
 
 
 
-def i_file(name_file):                                                              # declaring i_file() function 
-                                                                                    # with parameter for the file name
+def i_file(name_file):                                                               
+                                                                                    
 
-    total = 0                                                                       # an integer to hold the total
-    num_read = 0                                                                    # and integer to hold the number read
+    total = 0                                                                       
+    num_read = 0                                                                    
 
 
 
-    n_file = input("\nEnter the name of the file> ")                                # prompting the user to enter the file name
+    n_file = input("\nEnter the name of the file> ")                                
 
-    while(n_file != name_file):                                                     # validating the input
+    while(n_file != name_file):                                                     
         n_file = input("\nInvalid input. Try again> ")
 
 
 
     print("\nThe numbers are: \n")                                                  
-    input_file = open(n_file, 'r')                                                  # opening the file
+    input_file = open(n_file, 'r')                                                  
 
     try:
 
-        str_num = input_file.readline()                                             # assigning the first line to str_num
+        str_num = input_file.readline()                                             
         
         while(str_num != ''):
 
-            r_num = int(str_num)                                                    # converting str_num to an integer, assigning
-                                                                                    # the valie to r_num
+            r_num = int(str_num)                                                    
+                                                                                    
 
-            print(r_num)                                                            # printing the output
+            print(r_num)                                                            
 
-            total += r_num                                                          # adding the currnet value to total
-            num_read += 1                                                           # adding 1 to num_read
+            total += r_num                                                          
+            num_read += 1                                                           
 
-            str_num = input_file.readline()                                         # reading the next line
+            str_num = input_file.readline()                                         
 
-    except IOError:                                                                 # validating the output
+    except IOError:                                                                 
         print("\nError while reading the file\n")
         
 
-    print("\nThe total of the numbers is: ", total)                                 # printing the total
-    print("The numbers read are: ", num_read)                                       # printing the number read
+    print("\nThe total of the numbers is: ", total)                                 
+    print("The numbers read are: ", num_read)                                       
 
 
 
