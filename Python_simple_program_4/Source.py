@@ -1,7 +1,7 @@
 
 
 
-def main():                                                                                 # main function
+def main():                                                                                 
 
     number = int(input("\nEnter an integer 1 trough 10 to convert to roman number > "))
 
@@ -9,8 +9,8 @@ def main():                                                                     
 
 
 
-def to_Roman(number):                                                                       # to_Roman function to check the data and print the result
-                                                                                            # with conditional operator
+def to_Roman(number):                                                                       
+                                                                                            
     if number == 1:
         print("\nThe roman for ", number, " is 'I'\n")
     elif number == 2:
@@ -36,11 +36,6 @@ def to_Roman(number):                                                           
 
 
 
-main()                                                                                      # calling the main function
-
-
-
-
-
+main()                                                                                      
 
 
