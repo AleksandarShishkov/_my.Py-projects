@@ -2,30 +2,27 @@
 
 
 
-def upper_case(user):                                                                   # defining upper_case method with parameter for 
-                                                                                        # the string
+def upper_case(user):                                                                    
+                                                                                        
 
-    upperCase = 0                                                                       # an integer to keep count for the upper-cas eletters
-    upper_case = []                                                                     # a list to hold the upper-case letters
+    upperCase = 0                                                                       
+    upper_case = []                                                                     
 
     for i in range(len(user)):
 
         if(user[i].isupper()):
 
-            upperCase += 1                                                              # adding 1 to upperCase if an upper-case letter is located
-            upper_case += list(user[i])                                                 # adding the letter to the list
+            upperCase += 1                                                              
+            upper_case += list(user[i])                                                 
 
 
 
 
-    print('\nString: ', user)                                                           # printing the string
-    print('Number of upper-case letters: ', upperCase)                                  # printing the number of upper-case letters
-    print('Letters: ', end = '')                                                        # printing the letters
+    print('\nString: ', user)                                                           
+    print('Number of upper-case letters: ', upperCase)                                  
+    print('Letters: ', end = '')                                                        
 
     for i in upper_case:
 
         print(i, end =' ')
-
-
-
 
