@@ -1,6 +1,4 @@
 
-#A simple Python program that calculates the tax to a certain amount set by the user
-
 
 tax_county = 0.02
 tax_state = 0.04
