@@ -2,10 +2,10 @@
 
 
 
-def consonants(user):                                                                   # defining consonats method
+def consonants(user):                                                                   
 
-    numConsonants = 0                                                                   # an integer to keep count of the consonants lcoated
-    cons_list = []                                                                      # a list to hold the consonants
+    numConsonants = 0                                                                   
+    cons_list = []                                                                      
     cons_located = False
 
 
@@ -17,8 +17,8 @@ def consonants(user):                                                           
            user[i].lower() != 'i' and user[i].lower() != 'u' and 
            user[i].lower() != 'o')):
 
-            numConsonants += 1                                                          # adding 1 to numConsonants
-            cons_list += list(user[i])                                                  # adding the consonant in the list
+            numConsonants += 1                                                          
+            cons_list += list(user[i])                                                  
             cons_located = True
 
 
@@ -27,9 +27,9 @@ def consonants(user):                                                           
 
     if(cons_located):
 
-        print('\nString: ', user)                                                       # printing the string
-        print('Number of consonants: ', numConsonants)                                  # printing the number of consonants
-        print('Letters: ', end = '')                                                    # printing the letters
+        print('\nString: ', user)                                                       
+        print('Number of consonants: ', numConsonants)                                  
+        print('Letters: ', end = '')                                                    
    
         for i in cons_list:
 
@@ -39,11 +39,5 @@ def consonants(user):                                                           
 
     else:
 
-        print('\nNo consonats located')                                                 # printing message indicating that no consonats were
-                                                                                        # located if none in the string
-
-
-
-
-
-
+        print('\nNo consonats located')                                                 
+                                                                                        
