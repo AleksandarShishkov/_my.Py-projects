@@ -1,20 +1,8 @@
 
 
-
-
-        # A Python program which prompts
-        # the user to select between
-        # three options from a menu
-        # and convert string to integers
-        # or integers to a string in
-        # regard to the user`s choice
-
-
-
-
-import convert_str                                                      # importing convert_str module
-import convert_int                                                      # importing convert_int module
-import menu                                                             # importing menu modlue
+import convert_str                                                      
+import convert_int                                                      
+import menu                                                             
 
 
 
@@ -22,34 +10,34 @@ import menu                                                             # import
 def main():
 
 
-    user_choice = 1                                                     # an integer to hold the user`s choice
+    user_choice = 1                                                     
 
-    while(user_choice != 0):                                            # entering the sentinel-controlled loop
+    while(user_choice != 0):                                            
 
-        user_choice = menu.menu()                                       # printing the menu
+        user_choice = menu.menu()                                       
 
-        if(user_choice == 1):                                           # validating the input
+        if(user_choice == 1):                                           
             
-            user_str = input("\nEnter the string > ")                   # prompting the user to enter a string
-            convert_str.convert_string(user_str)                        # calling convert_string method
+            user_str = input("\nEnter the string > ")                   
+            convert_str.convert_string(user_str)                        
 
         elif(user_choice == 2):                            
             
-            user_num = input('Enter an integer> ')                      # prompting the user to enter an integer
-            convert_int.convert_integer(user_num)                       # calling convert_integer method
+            user_num = input('Enter an integer> ')                      
+            convert_int.convert_integer(user_num)                       
 
 
         else:
 
-            print('\nThe program has ended!\n')                         # a message indicating that the program
-                                                                        # has ended
+            print('\nThe program has ended!\n')                         
+                                                                        
    
     
        
 
 
 
-main()                                                                  # calling the main() function
+main()                                                                  
 
 
 
