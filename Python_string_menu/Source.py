@@ -1,31 +1,16 @@
 
 
-
-
-        # A Python program that prompts
-        # the user to enter a string and then
-        # select an action from a menu.
-        #
-        # The program deisplayes the ouptu on the screen
-        # after executing the selected operation.
-        
-        
-
-
-
-
-
-import count_words                                                                      # importing count_words module
-import average_letters                                                                  # importing average_letters module
-import num_upper                                                                        # importing num_upper module
-import num_lower                                                                        # importing num_lowe module
-import convert_f_letter_capital                                                         # importing convert_f_letter_capital module
-import convert_f_letter_lower                                                           # importing convert_f_letter_lower module
-import num_spaces                                                                       # importing num_spaces module
-import num_digits                                                                       # importing num_digits module
-import num_consonants                                                                   # importing num_consonants module
-import menu                                                                             # importing menu module
-import num_vowels                                                                       # imporintg num_vowels module
+import count_words                                                                      
+import average_letters                                                                  
+import num_upper                                                                        
+import num_lower                                                                        
+import convert_f_letter_capital                                                         
+import convert_f_letter_lower                                                           
+import num_spaces                                                                       
+import num_digits                                                                       
+import num_consonants                                                                   
+import menu                                                                             
+import num_vowels                                                                       
 
 
 
@@ -33,75 +18,66 @@ import num_vowels                                                               
 
 def main():
 
-    user_choice = 1                                                                     # an integer to hold the users choice
+    user_choice = 1                                                                     
     
-    user = input('\nEnter a sting> ')                                                   # prompting the user to input a string
+    user = input('\nEnter a sting> ')                                                   
 
 
 
-    while(user_choice != 0):                                                            # sentinel-controlled loop
+    while(user_choice != 0):                                                            
 
-        user_choice = menu.user_menu()                                                  # showing the menu
+        user_choice = menu.user_menu()                                                  
 
-        if(user_choice == 1):                                                           # validating the choice
+        if(user_choice == 1):                                                           
 
-            count_words.num_words(user)                                                 # calling num_words methond
+            count_words.num_words(user)                                                 
 
         elif(user_choice == 2):
 
-            average_letters.average(user)                                               # calling average method
+            average_letters.average(user)                                               
 
         elif(user_choice == 3):
 
-            num_upper.upper_case(user)                                                  # calling upper_case method
+            num_upper.upper_case(user)                                                  
 
         elif(user_choice == 4):
 
-            num_lower.lower_case(user)                                                  # calling lower_case method
+            num_lower.lower_case(user)                                                  
 
         elif(user_choice == 5):
 
-            convert_f_letter_capital.convert_capital(user)                              # calling convert_capital method
+            convert_f_letter_capital.convert_capital(user)                              
 
         elif(user_choice == 6):
 
-            convert_f_letter_lower.convert_lower(user)                                  # calling convert_lower method
+            convert_f_letter_lower.convert_lower(user)                                  
 
         elif(user_choice == 7):
 
-            num_spaces.spaces(user)                                                     # calling spaces method
+            num_spaces.spaces(user)                                                     
 
         elif(user_choice == 8):
 
-            num_digits.digits(user)                                                     # calling digits method
+            num_digits.digits(user)                                                     
 
         elif(user_choice == 9):
 
-            num_consonants.consonants(user)                                             # calling consonants method
+            num_consonants.consonants(user)                                             
 
         elif(user_choice == 10):
 
-            num_vowels.vowels(user)                                                     # calling vowels method
+            num_vowels.vowels(user)                                                     
 
         elif(user_choice == 11):
 
-            user = input('\nEnter the new string> ')                                    # prompting the user to enter the new string
+            user = input('\nEnter the new string> ')                                    
 
         else:
 
-            print('\nThe program has ended!\n')                                         # printing a message indicating that the program
-                                                                                        # has ended
+            print('\nThe program has ended!\n')                                         
+                                                                                        
 
 
-
-
-
-
-
-
-main()                                                                                  # calling main
-
-
-
+main()                                                                                  
 
 
