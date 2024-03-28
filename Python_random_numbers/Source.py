@@ -1,33 +1,33 @@
 
-import random                                                   # importing the random module
+import random                                                   
 
 
 
 
-def main():                                                     # definition of main() function
+def main():                                                     
 
-    showMessage()                                               # calling showMessage() function
+    showMessage()                                               
 
     newGame = True
 
     while(newGame):
 
 
-        choice = showMenu()                                     # an int to hold the returned from the showMenu() function value
-        reply, num1, num2 = getData(choice)                     # assigning the value from getData() function to reply, num1 and num2
-        validateReply(reply, num1, num2, choice)                # calling validateReply() function
+        choice = showMenu()                                     
+        reply, num1, num2 = getData(choice)                     
+        validateReply(reply, num1, num2, choice)                
         nreGame = nextTry()
 
 
 
-def showMessage():                                              # showMessage() function which prints the message on the top of the program
+def showMessage():                                              
 
     print("\n This is a math quiz. You are about to " \
         "be shown two integers. Guess the outcome\n\n")
 
 
 
-def showMenu():                                                 # showMenu() function to display menu and returns selected operation or exit
+def showMenu():                                                 
 
     print("\n\tMENU")
     print("\nSelect between the following : ")
@@ -37,25 +37,25 @@ def showMenu():                                                 # showMenu() fun
     print("4 - division")
     print("5 - exit")
 
-    choice = int(input("\nEnter your choice> "))                # prompting the user to enter the choice
+    choice = int(input("\nEnter your choice> "))                
 
-    while(choice < 1 and choice > 5):                           # validation of the input
+    while(choice < 1 and choice > 5):                           
         print("\nInvalid choice. Try again (1 - 5)> ")
         choice = int()
 
-    return choice                                               # returning the value
+    return choice                                               
 
 
 
 
-def getData(choice):                                            # getData() function with 1 parameter for the selected arithmetic operation
+def getData(choice):                                            
 
 
     
-    num1 = random.randrange(1, 100)                             # randomizing the first integer
-    num2 = random.randrange(1, 100)                             # randomizing the second integer
+    num1 = random.randrange(1, 100)                             
+    num2 = random.randrange(1, 100)                             
 
-                                                                # an if-elif-else statement for choice selection
+                                                                
     if(choice == 1):
         print("\n\t", num1)
         print("\t+")
@@ -84,11 +84,10 @@ def getData(choice):                                            # getData() func
         print("\nYou`ve exited the program!\n")
         exit(0)
 
-    return reply, num1, num2                                    # returntning three values
+    return reply, num1, num2                                    
 
 
-
-def validateReply(reply, num1, num2, choice):                   # validateReply() function to validate the reply
+def validateReply(reply, num1, num2, choice):                   
 
 
     if(choice == 1):
@@ -115,7 +114,7 @@ def validateReply(reply, num1, num2, choice):                   # validateReply(
     
 
 
-def nextTry():                                                  # prompting the user to choose whether to try again
+def nextTry():                                                  
 
     nextTry = True
 
@@ -135,6 +134,6 @@ def nextTry():                                                  # prompting the 
 
 
 
-main()                                                          # calling the main function
+main()                                                          
 
 
