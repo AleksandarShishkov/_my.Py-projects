@@ -3,14 +3,14 @@
 
 
 
-def new_game():                                                                     # defining the new_game() function
+def new_game():                                                                     
 
-    choice = input('\nNew Game? (y/n)> \n')                                         # prompting the user for an imput
+    choice = input('\nNew Game? (y/n)> \n')                                         
 
-    while(choice != 'y'and choice != 'n'):                                          # validating the input
+    while(choice != 'y'and choice != 'n'):                                          
         choice = input('\nInvalid input. Try again (y/n)> ')
 
-    if(choice == 'y'):                                                              # returning True or False depending on the validation
+    if(choice == 'y'):                                                              
         return True
     else:
         return False
