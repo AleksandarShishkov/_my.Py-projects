@@ -2,10 +2,10 @@
 
 
 
-def user_menu():                                                                        # defining user_menu method
+def user_menu():                                                                        
 
 
-    print('\n\n\tSelect between the following:\n')                                      # printing the menu
+    print('\n\n\tSelect between the following:\n')                                      
     print("'1' for the number of words")
     print("'2' for the average number of letters in word")
     print("'3' for the number of all upper-case letters")
@@ -18,13 +18,10 @@ def user_menu():                                                                
     print("'10' for the number of vowels")
     print("'11' for new string")
     print("'0' to quit the program")
-    choice = int(input("\t> "))                                                         # promting the user to enter the choice
+    choice = int(input("\t> "))                                                         
 
-    while(choice < 0 or choice > 11):                                                   # validating the input
+    while(choice < 0 or choice > 11):                                                   
 
         choice = int(input("\n\tInvalid input. Try agian> "))
 
-    return choice                                                                       # returning choice
-
-
-
+    return choice                                                                       
