@@ -2,17 +2,17 @@
 
 
 
-def spaces(user):                                                                       # defining spaces method
+def spaces(user):                                                                       
 
 
-    numSpaces = 0                                                                       # an integer to keep count of the number of spaces
+    numSpaces = 0                                                                       
 
     for i in range(len(user)):
 
         if(user[i] == ' '):
-            numSpaces += 1                                                              # adding 1 to numSpaces if a space is located
+            numSpaces += 1                                                              
 
 
     
-    print('\nString: ', user)                                                           # printing the string
-    print('White spaces: ', numSpaces)                                                  # printing the number of spaces
+    print('\nString: ', user)                                                           
+    print('White spaces: ', numSpaces)                                                  
